@@ -1,0 +1,12 @@
+<section>
+    <input
+    type="search"
+    placeholder="Pesquise o produto"
+    [(ngModel)]="product"
+    (keyup.enter)="searchProduct()"
+    >
+
+    <button (click)="searchProduct()">pesquisar</button>
+
+    <p>{{product}}</p>
+</section>

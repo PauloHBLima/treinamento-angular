@@ -1,0 +1,36 @@
+<header>
+    <ul>
+        <li *ngFor="let menu of menus">
+            <a [routerLink]="[menu.rota]">{{ menu.texto }}</a>
+        </li>
+    </ul>
+</header>
+<!--
+    <header>
+    <ul>
+        <li>
+            <a routerLink="/">Home</a>
+        </li>
+        <li>
+            <a routerLink="/products">Products</a>
+        </li>
+        <li>
+            <a routerLink="/teste">Página Teste</a>
+        </li>
+    </ul>
+</header> -->
+
+
+<!-- <header>
+    <ul>
+        <li>
+            <a [routerLink]="['/']">Home</a>
+        </li>
+        <li>
+            <a routerLink="/products">Products</a>
+        </li>
+        <li>
+            <a routerLink="/teste">Página Teste</a>
+        </li>
+    </ul>
+</header> -->
