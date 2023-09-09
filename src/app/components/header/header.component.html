@@ -1,7 +1,7 @@
 <header>
     <ul>
         <li *ngFor="let menu of menus">
-            <a [routerLink]="[menu.rota]">{{ menu.texto }}</a>
+            <a [routerLink]="[menu.rota]" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">{{ menu.texto }}</a>
         </li>
     </ul>
 </header>
