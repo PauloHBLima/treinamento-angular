@@ -1,1 +1,5 @@
-<p>product works!</p>
+<h1> Produto: {{ id }}</h1>
+
+<div *ngIf="nome && preco">
+    <p>Produto: {{nome}}, R$ {{preco}}</p>
+</div>
