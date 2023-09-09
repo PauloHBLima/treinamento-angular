@@ -10,7 +10,7 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'error', component: NotFoundComponent },
     {path: 'products', component: ProductsComponent},
-    {path: 'product/:id', component: ProductComponent},
+    {path: 'products/:id', component: ProductComponent},
     {path: 'teste', component: FirstComponentComponent},
     { path: "**", redirectTo: "/error" },
 ];

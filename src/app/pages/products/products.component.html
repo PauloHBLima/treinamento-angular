@@ -1,1 +1,22 @@
-<p>products works!</p>
+<!-- <section class="products">
+    <div class="products__container">
+        <a *ngFor="let product of products" [id]="product.id"
+        (click)="redirectPageProduct(product.id)">
+            <h2>{{product.title}}</h2>
+            <p>{{product.price | currency: "BRL" }}</p>
+            <p *ngIf="product.description"> {{ product.description}}</p>
+        </a>
+    </div>
+</section>
+ -->
+
+ <section class="products">
+    <div class="products__container">
+        <a *ngFor="let product of products" [id]="product.id"
+        [routerLink]="['/products', product.id]">
+            <h2>{{product.title}}</h2>
+            <p>{{product.price | currency: "BRL" }}</p>
+            <p *ngIf="product.description"> {{ product.description}}</p>
+        </a>
+    </div>
+</section>
