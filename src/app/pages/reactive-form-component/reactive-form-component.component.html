@@ -2,11 +2,46 @@
     <div>
         <label for="name">Nome:</label>
         <input type="text" id="name" placeholder="insira o nome" formControlName="name">
+        <div>
+            <span class="error"
+                *ngIf="cadastroForm.get('name')?.errors?.['required'] && cadastroForm.get('name')?.touched">Nome é
+                obrigatório</span>
+            <span class="error"
+                *ngIf="cadastroForm.get('name')?.errors?.['minlength'] && cadastroForm.get('name')?.touched">
+                Nome tem que ter no mínimo {{ minLength }} caracteres!
+            </span>
+            <span class="error" *ngIf="cadastroForm.get('name')?.errors?.['minlength'] && cadastroForm.get('name')?.touched">
+                Nome tem que ter no mínimo {{ minLength }} caracteres!
+            </span>
+        </div>
     </div>
+
+    <div>
+        <label for="cpf">CPF:</label>
+        <input type="text" placeholder="xxx.xxx.xxx-xx" formControlName="cpf" id="cpf" maxlength="11">
+
+        <div>
+            <span class="error" *ngIf="cadastroForm.get('cpf')?.errors?.['required'] && cadastroForm.get('cpf')?.touched"></span>
+            <span class="error" *ngIf="cadastroForm.get('cpf')?.errors?.['cpfInvalid'] && cadastroForm.get('cpf')?.value > 10">
+                Insira um cpf válido!
+            </span>
+        </div>
+    </div>
+
+
     <br>
     <div>
         <label for="email">Email</label>
         <input type="email" id="email" placeholder="youremail@email.com" formControlName="email">
+        <div>
+            <span class="error" *ngIf="cadastroForm.get('email')?.errors?.['required'] && cadastroForm.get('email')?.touched">
+                Email é obrigatório!
+            </span>
+
+            <span class="error" *ngIf="cadastroForm.get('email')?.errors?.['email'] && cadastroForm.get('email')?.touched">
+                Insira um email válido!
+            </span>
+        </div>
     </div>
     <div>
         <label for="age">Idade</label>
@@ -25,6 +60,7 @@
         <label for="news">desejo receber as novidades</label>
     </div>
 
+    <button type="submit" [disabled]="cadastroForm.invalid">Enviar</button>
     <br><br><br>
     <p>{{cadastroForm.value | json}}</p>
 </form>
