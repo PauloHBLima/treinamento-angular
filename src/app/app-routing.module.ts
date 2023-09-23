@@ -6,6 +6,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ProductComponent } from './pages/product/product.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
 import { SimpleFormComponent } from './pages/simple-form/simple-form.component';
+import { ReactiveFormComponentComponent } from './pages/reactive-form-component/reactive-form-component.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'products/:id', component: ProductComponent },
     { path: 'teste', component: FirstComponentComponent },
     { path: 'forms-module', component: SimpleFormComponent },
+    {path: 'reactive-forms', component: ReactiveFormComponentComponent},
     { path: "**", redirectTo: "/error" },
 ];
 

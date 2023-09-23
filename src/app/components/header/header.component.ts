@@ -12,7 +12,8 @@ export class HeaderComponent {
         {rota: '/', texto: 'home'},
         {rota: '/products', texto: 'products'},
         {rota: '/test', texto: 'Página teste'},
-        { rota: '/forms-module', texto: "Exemplo Forms Module"}
+        { rota: '/forms-module', texto: "Exemplo Forms Module"},
+        {rota: '/reactive-forms', texto: 'exemplo reactive-forms'}
     ]
 
 }
