@@ -12,6 +12,8 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CadastroReactiveFormsComponent } from './components/cadastro-reactive-forms/cadastro-reactive-forms.component';
+import { SimpleFormComponent } from './pages/simple-form/simple-form.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { HeaderComponent } from './components/header/header.component';
     ProductComponent,
     ProductsComponent,
     HeaderComponent,
+    CadastroReactiveFormsComponent,
+    SimpleFormComponent,
 
 
   ],

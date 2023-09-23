@@ -1,0 +1,60 @@
+<p>simple-form works!</p>
+
+<form #form="ngForm" autocomplete="off" (ngSubmit)="submitForm(form.value)">
+    <!-- Ng form com input text-->
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" ngModel>
+    <br><br>
+
+    <!-- Ng form com input radio-->
+    <label>Sexo</label>
+    <input type="radio" name="sexo" id="masculino" value="M" ngModel>
+    <label for="masculino">Masculino</label>
+    <input type="radio" name="sexo" id="feminino" value="F" ngModel>
+    <label for="masculino">Feminino</label>
+
+    <!-- Ng form com input checkbox-->
+
+    <p>selecione as tecnologias que você gosta de trabalhar</p>
+    <label for="angular">Angular</label>
+    <input type="checkbox" name="angular" id="angular" ngModel>
+    <br>
+    <label for="React">React</label>
+    <input type="checkbox" name="React" id="React" ngModel>
+    <br>
+    <label for="Vue">Vue</label>
+    <input type="checkbox" name="Vue" id="Vue" ngModel>
+    <br>
+    <br>
+    <br>
+
+    <!-- Ng form com select ( exemplo com options estaticos )-->
+    <p>Comida</p>
+    <select name="comida" ngModel>
+        <option value disabled> Selecione um Lanche</option>
+        <option value="x-salada">X-Salada</option>
+        <option value="x-bacon">X-Bacon</option>
+        <option value="Doguinho">Doguinho</option>
+    </select>
+    <br><br><br>
+
+
+    <!-- Ng form com select recebendo dado da api -->
+    <p>Estado</p>
+    <select style="margin: 1rem 0" name="estado" ngModel>
+        <option value disabled> Selecione um Estado </option>
+        <option *ngFor="let estado of estadosDoSul" [ngValue]="estado.uf">{{estado.uf | uppercase}}</option>
+    </select>
+
+    <p>Bebidas</p>
+    <select style="margin: 1rem 0" name="Bebida" ngModel>
+        <option value disabled> Selecione uma Bebida </option>
+        <option *ngFor="let bebida of bebidas" [ngValue]="bebida">{{bebida.nome | titlecase}}</option>
+    </select>
+
+<br><br><br>
+<button type="submit">Enviar</button>
+
+
+    <p>Valor do form {{form.value | json }}</p>
+</form>

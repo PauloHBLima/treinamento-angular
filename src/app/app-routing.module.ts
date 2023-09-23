@@ -5,13 +5,15 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductComponent } from './pages/product/product.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
+import { SimpleFormComponent } from './pages/simple-form/simple-form.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'error', component: NotFoundComponent },
-    {path: 'products', component: ProductsComponent},
-    {path: 'products/:id', component: ProductComponent},
-    {path: 'teste', component: FirstComponentComponent},
+    { path: 'products', component: ProductsComponent },
+    { path: 'products/:id', component: ProductComponent },
+    { path: 'teste', component: FirstComponentComponent },
+    { path: 'forms-module', component: SimpleFormComponent },
     { path: "**", redirectTo: "/error" },
 ];
 
