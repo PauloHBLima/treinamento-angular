@@ -25,7 +25,13 @@ export class SimpleFormComponent implements OnInit {
         ];
     }
 
-    submitForm(value: NgForm) {
-        console.log('Form value: ', value);
+    submitForm(form: NgForm) {
+        if (form.valid) {
+
+            console.log('Form value ', form);
+        } else {
+            alert('sai pra lá')
+            form.reset();
+        }
     }
 }

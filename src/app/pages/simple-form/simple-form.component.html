@@ -1,10 +1,21 @@
 <p>simple-form works!</p>
 
-<form #form="ngForm" autocomplete="off" (ngSubmit)="submitForm(form.value)">
-    <!-- Ng form com input text-->
+<form #form="ngForm" autocomplete="off" (ngSubmit)="submitForm(form)">
+    <!-- ngForm com input text -->
     <label for="nome">Nome:</label>
-    <input type="text" name="nome" id="nome" ngModel>
-    <br><br>
+    <input type="text" name="nome" id="nome" required minlength="3" maxlength="10" #nome="ngModel" ngModel />
+    <br />
+    <span class="error" *ngIf="nome?.errors?.['required'] && nome.touched && nome.dirty">Nome é obrigatório!</span>
+    <span class="error" *ngIf="nome.touched && nome?.errors?.['minglength']">Nome tem que ter no minimo 3
+        caracteres!</span>
+    <span class="error" *ngIf="nome?.errors?.['maxlength'] && nome.touched">Nome tem que ter no máximo 10
+        caracteres!</span>
+
+    <p>Nome é obrigatório {{nome?.errors?.['required']}}</p>
+    <p>Nome tem mais de 3 caracteres? {{nome?.errors?.['minlength']}}</p>
+    <p>Nome tem mais de 10 caracteres? {{nome?.errors?.['maxlength']}}</p>
+    <p>Nome já foi tocado? {{ nome.touched }}</p>
+    <p>Nome já foi modificado? {{ nome.dirty }}</p>
 
     <!-- Ng form com input radio-->
     <label>Sexo</label>
@@ -52,8 +63,8 @@
         <option *ngFor="let bebida of bebidas" [ngValue]="bebida">{{bebida.nome | titlecase}}</option>
     </select>
 
-<br><br><br>
-<button type="submit">Enviar</button>
+    <br><br><br>
+    <button type="submit" [disabled]>Enviar</button>
 
 
     <p>Valor do form {{form.value | json }}</p>
