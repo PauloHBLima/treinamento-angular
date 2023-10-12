@@ -1,0 +1,18 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "image": "https://images.kabum.com.br/produtos/fotos/373931/notebook-gamer-lenovo-gaming-3-intel-core-i5-11300h-geforce-gtx1650-8gb-ram-ssd-512gb-15-6-full-hd-windows-11-preto-82mg0009br-_1662137578_gg.jpg",
+      "name": "https://www.kabum.com.br/produto/373931/notebook-gamer-lenovo-gaming-3i-intel-core-i5-11300h-8gb-ram-geforce-gtx-1650-ssd-512gb-15-6-full-hd-windows-11-preto-82mg0009br",
+      "price": "1329.15",
+      "description": "Novo design com 11ª Geração de Processadores Intel Core i5-11300H e placa de vídeo NVIDIA GeForce GTX 1650 4GB. Ideal para gamers e usuários que também precisam de alta performance. Com tela de 15.6'' Full HD WVA Antirreflexo para melhor definição de imagem e cores. O armanezamento SSD PCIe NVMe é 10x mais rápido* que um HDD 2.5” SATA, você terá mais segurança ao armazenar seus dados. O teclado retroiluminado em LED branco, deixa o computador mais atraente e também favorece a performance para jogos em lugares com pouca iluminação."
+    },
+    {
+      "name": "placa de video",
+      "price": 2500,
+      "image": "https://www.kabum.com.br/produto/461387/placa-de-video-rtx-4060-ti-oc-edition-asus-nvidia-geforce-8-gb-gddr6-dlss-ray-tracing-dual-rtx4060ti-o8g",
+      "description": "Placa de Vídeo RTX 4060 TI Asus DUAL O8G\nA ASUS Dual GeForce RTX 4060 Ti combina desempenho térmico dinâmico com ampla compatibilidade. Soluções avançadas de refrigeração das principais placas gráficas - incluindo dois coolers Axial-tech para maximizar o fluxo de ar para o dissipador de calor - estão incluídas na placa de 2,5 slots de 22,7 cm de comprimento, fornecendo mais potência em menos espaço. Esses aprimoramentos tornam o ASUS Dual a escolha perfeita para jogadores que desejam desempenho gráfico pesado em uma construção compacta.",
+      "id": 2
+    }
+  ]
+}
