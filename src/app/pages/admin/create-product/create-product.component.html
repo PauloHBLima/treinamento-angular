@@ -1,7 +1,7 @@
 <form [formGroup]="productForm" (ngSubmit)="submitForm()">
 <label>
     Nome:
-    <input type="text" formControlName="name">
+    <input appOnlyLetters type="text" formControlName="name">
 </label>
 <label>
     Preço:

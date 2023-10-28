@@ -16,6 +16,11 @@ import { CadastroReactiveFormsComponent } from './components/cadastro-reactive-f
 import { SimpleFormComponent } from './pages/simple-form/simple-form.component';
 import { ReactiveFormComponentComponent } from './pages/reactive-form-component/reactive-form-component.component';
 import { CreateProductComponent } from './pages/admin/create-product/create-product.component';
+import { BgYellowDirective } from './directives/bg-yellow.directive';
+import { HightLigthMouseDirective } from './directives/hight-ligth-mouse.directive';
+import { HighLigthInputDirective } from './directives/high-ligth-input.directive';
+import { NgElseDirective } from './directives/ng-else.directive';
+import { OnlyLettersDirective } from './directives/only-letters.directive';
 
 @NgModule({
   declarations: [
@@ -32,6 +37,11 @@ import { CreateProductComponent } from './pages/admin/create-product/create-prod
     SimpleFormComponent,
     ReactiveFormComponentComponent,
     CreateProductComponent,
+    BgYellowDirective,
+    HightLigthMouseDirective,
+    HighLigthInputDirective,
+    NgElseDirective,
+    OnlyLettersDirective,
 
 
   ],

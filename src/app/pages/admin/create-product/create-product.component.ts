@@ -75,6 +75,8 @@ export class CreateProductComponent {
     }
 
     deleteProduct(){
-        
+        this.productService.destroy(this.productId).subscribe({
+            
+        });
     }
 }

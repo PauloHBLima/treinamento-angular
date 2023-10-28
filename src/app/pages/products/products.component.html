@@ -10,14 +10,15 @@
 </section>
  -->
 
- <section class="products">
+ <section class="products" appHightLigthMouse>
     <div class="products__container">
         <a *ngFor="let product of products" [id]="product.id"
         [routerLink]="['/products', product.id]">
             <h2>{{product.name}}</h2>
             <img [src]="product.image" [alt]="product.name">
             <p>{{product.price | currency: "BRL" }}</p>
-            <p *ngIf="product.description"> {{ product.description}}</p>
+            <p *ngIf="product.description"> {{ product.description }}</p>
+            <button appBgYellow>Teste</button>
         </a>
     </div>
 </section>
